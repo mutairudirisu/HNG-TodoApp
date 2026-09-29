@@ -1,13 +1,17 @@
-﻿{
+{
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "services": {
     "backend": {
       "root": "backend",
-      "framework": "nestjs"
+      "framework": "nestjs",
+      "installCommand": "npm install",
+      "buildCommand": "npm install && npm run build"
     },
     "frontend": {
       "root": "frontend",
       "framework": "nextjs",
+      "installCommand": "npm install",
+      "buildCommand": "npm install && npm run build",
       "bindings": [
         {
           "type": "service",
